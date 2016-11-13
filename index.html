@@ -10,6 +10,7 @@
     <h1>{{ vm.list.name }}</h1>
 
     <!-- add task -->
+
     <button ng-click="vm.startAdd()" 
             ng-show="!vm.isInAddMode()">
       Add a Task
@@ -18,8 +19,14 @@
     <div ng-show="vm.isInAddMode()">
       <input placeholder="task name" 
              ng-model="vm.currentTask.name">
-      <button ng-click="vm.add()">Add New Task</button>
-    </div>
+      <button ng-click="vm.add()">
+        Add
+      </button>
+      <button ng-click="vm.cancel()">
+        Cancel
+      </button>
+
+    </div> <!-- vm.isInAddMode() -->
 
     <!-- tasks -->
     <div ng-repeat="task in vm.list.tasks | orderBy: '$index'">
