@@ -5,6 +5,9 @@ angular
 function ListController() {
   var vm = this;
 
+  vm.currentTask = {};
+  vm.add = add;
+
   vm.list = {
     name: "Todo List",
     tasks: [
@@ -19,6 +22,11 @@ function ListController() {
         complete: true
       }
     ]
+  }
+
+  function add() {
+    vm.currentTask.complete = false;
+    vm.list.tasks.push(vm.currentTask);
   }
 
 }
