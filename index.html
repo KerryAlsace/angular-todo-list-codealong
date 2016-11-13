@@ -43,6 +43,8 @@
 
       </div> <!-- vm.isInReadMode(task.id) -->
 
+      <!-- edit task -->
+
       <div ng-show="vm.isInEditMode(task.id)">
 
         <input placeholder="task name"
@@ -59,6 +61,22 @@
         </button>
 
       </div> <!-- vm.isInEditMode(task.id) -->
+
+      <!-- delete task -->
+      
+      <div ng-show="vm.isInRemoveMode(task.id)">
+
+        <p>
+          {{ task.name }} - complete: {{ task.complete }}
+        </p>
+        <button ng-click="vm.remove(task.id)">
+          Confirm
+        </button>
+        <button ng-click="vm.cancel()">
+          Cancel
+        </button>
+        
+      </div> <!-- vm.isInRemoveMode(task.id) -->
 
     </div> <!-- task in vm.list.tasks | orderBy: '$index' -->
 
