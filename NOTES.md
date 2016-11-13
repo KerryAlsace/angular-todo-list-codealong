@@ -9,4 +9,5 @@
   js/
   js/app/
   `mv node_modules/angular/angular.js js/angular.js`
--
+- add ng-app to index.html
+- add js/app/app.js
