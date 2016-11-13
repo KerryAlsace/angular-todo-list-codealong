@@ -18,7 +18,7 @@ function ListController() {
   vm.isInEditMode = isInEditMode;
   vm.add = add;
   vm.save = save;
-  vm.cancel = cancel;
+  vm.cancel = reset;
 
   vm.list = {
     name: "Todo List",
@@ -92,10 +92,6 @@ function ListController() {
         reset();
       }
     }
-  }
-
-  function cancel() {
-
   }
 
 }
