@@ -7,12 +7,12 @@
     "start": "npm run live"
   },
   "author": "Kerry Dougherty",
-  "license": "ISC"
+  "license": "ISC",
   "dependencies": {
     "angular": "^1.5.8"
   },
   "devDependencies": {
-    "live-server": "^0.0.2"
+    "live-server": "^0.9.2"
   }
 
 }
